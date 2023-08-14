@@ -1,5 +1,5 @@
 /* eslint-disable valid-jsdoc */
-class NumbersValidator {
+export class NumbersValidator {
   /**
    * @param {Number} number number to check
    * @return {Boolean} true if element is even
@@ -49,4 +49,4 @@ class NumbersValidator {
   }
 }
 
-module.exports = NumbersValidator;
+// module.exports = NumbersValidator;

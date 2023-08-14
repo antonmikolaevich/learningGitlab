@@ -1,4 +1,4 @@
-import {NumbersValidator} from '../../app/numbers-validator.js';
+import {NumbersValidator} from './app/numbers-validator.js';
 import {expect} from 'chai';
 
 describe('isNumberEven tests', () => {

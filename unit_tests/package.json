@@ -5,7 +5,7 @@
   "description": "unit testing",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/isNumberEven.spec.js ./test/getEvenNumbersFromArray.spec",
+    "test": "mocha ./test/isNumberEven.spec.js ./test/getEvenNumbersFromArray.spec ./test/isAllNumbers.spec.js ./test/isInteger.spec.js",
     "coverage": "c8 npm test",
     "lint": "eslint ./ --fix"
   },

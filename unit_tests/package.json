@@ -1,0 +1,27 @@
+{
+  "name": "unit-tests",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/isNumberEven.spec.js ./test/getEvenNumbersFromArray.spec ./test/isAllNumbers.spec.js ./test/isInteger.spec.js",
+    "coverage": "c8 npm test",
+    "lint": "eslint ./ --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "c8": "^7.12.0",
+    "chai": "^4.3.6",
+    "husky": "^8.0.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3"
+  }
+}
+
+  

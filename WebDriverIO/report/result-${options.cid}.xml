@@ -1,99 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Basic Commands" timestamp="2023-09-10T21:55:53" time="77.042" tests="5" failures="0" errors="0" skipped="0">
+  <testsuite name="Introduction" timestamp="2023-09-10T22:59:11" time="1.52" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Basic Commands"/>
+      <property name="suiteName" value="Introduction"/>
       <property name="capabilities" value="firefox.119_0a1.windows"/>
-      <property name="file" value="file:///C:/Users/Anastasia_Blinova/Documents/js-automation/js-atm-program/WebDriverIO/test/specs/BasicCommands.spec.js"/>
+      <property name="file" value="file:///C:/Users/Anastasia_Blinova/Documents/js-automation/js-atm-program/WebDriverIO/test/specs/Introduction.spec.js"/>
     </properties>
-    <testcase classname="firefox.119_0a1.windows.Basic_Commands" name="Check Title" time="48.879">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Services button on the page" time="0.391">
       <system-out><![CDATA[
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: GET /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/title - {}
-RESULT: {}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@href=\"/services\"]"}
+RESULT: {"using":"xpath","value":"//*[@href=\"/services\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Basic_Commands" name="Check Accept Cookies button change the colour after over" time="13.075">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Industries button on the page" time="0.348">
       <system-out><![CDATA[
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-RESULT: {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-COMMAND: GET /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/634de2ec-2d1e-4526-bc62-384c38930ed7/css/color - {}
-RESULT: {}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Basic_Commands" name="Check Accept Cookies button is clickable" time="1.912">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Switcher radio button on the page" time="0.398">
       <system-out><![CDATA[
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-RESULT: {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/elements - {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-RESULT: {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/elements - {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-RESULT: {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-RESULT: {"using":"xpath","value":"//button[text()=\"Accept All\"]"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/42918c4d-3e55-4c65-92c2-74209362f02c/click - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"xpath","value":"//*[@id=\"onetrust-banner-sdk\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"onetrust-banner-sdk\"]"}
-COMMAND: GET /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/998e541f-ea70-4df9-86b2-c8bf7ad4e1ae/displayed - {}
-RESULT: {}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@class=\"switch\"]"}
+RESULT: {"using":"xpath","value":"//*[@class=\"switch\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Basic_Commands" name="Check search option" time="7.946">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Check Accept Cookies button is clickable" time="0.381">
       <system-out><![CDATA[
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"span.search-icon"}
-RESULT: {"using":"css selector","value":"span.search-icon"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/6bc0479d-6fff-423d-94fd-17e28073925d/click - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"input#new_form_search.header-search__input"}
-RESULT: {"using":"css selector","value":"input#new_form_search.header-search__input"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/5c99ee2f-92a6-4c99-875b-64cc7ab4f613/clear - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/5c99ee2f-92a6-4c99-875b-64cc7ab4f613/value - {"text":"JavaScript"}
-RESULT: {"text":"JavaScript"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"button.custom-button.button-text"}
-RESULT: {"using":"css selector","value":"button.custom-button.button-text"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/ea3fecfb-83c2-46f4-adb5-027035f63609/click - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"h2.search-results__counter[tabindex=\"0\"]"}
-RESULT: {"using":"css selector","value":"h2.search-results__counter[tabindex=\"0\"]"}
-COMMAND: GET /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/9982848f-3f85-46ba-844b-9f58676ea162/displayed - {}
-RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="firefox.119_0a1.windows.Basic_Commands" name="Check the openning Search result" time="5.225">
-      <system-out><![CDATA[
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/url - {"url":"https://www.epam.com/"}
-RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"span.search-icon"}
-RESULT: {"using":"css selector","value":"span.search-icon"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/81378275-2bef-4a55-9b94-02a296db0b53/click - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"input#new_form_search.header-search__input"}
-RESULT: {"using":"css selector","value":"input#new_form_search.header-search__input"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/408ee7bc-2ff5-4296-9154-d91ccfa1be4f/clear - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/408ee7bc-2ff5-4296-9154-d91ccfa1be4f/value - {"text":"JavaScript"}
-RESULT: {"text":"JavaScript"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"button.custom-button.button-text"}
-RESULT: {"using":"css selector","value":"button.custom-button.button-text"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/8c39e209-a9b5-4252-9eca-84f97e0f1505/click - {}
-RESULT: {}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element - {"using":"css selector","value":"a.search-results__title-link"}
-RESULT: {"using":"css selector","value":"a.search-results__title-link"}
-COMMAND: POST /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/element/30864aec-1b6f-4479-b877-5bca6805da97/click - {}
-RESULT: {}
-COMMAND: GET /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844/title - {}
-RESULT: {}
-COMMAND: DELETE /session/f36383e5-9a0a-4ec1-98a1-aa2ba6d52844 - {}
+COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
+RESULT: {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
+COMMAND: DELETE /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b - {}
 RESULT: {}
 ]]></system-out>
     </testcase>

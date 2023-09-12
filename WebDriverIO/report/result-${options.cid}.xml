@@ -1,43 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Introduction" timestamp="2023-09-12T11:40:28" time="6.579" tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Introduction" timestamp="2023-09-12T20:40:56" time="9.587" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Introduction"/>
       <property name="capabilities" value="firefox.119_0a1.windows"/>
       <property name="file" value="file:///C:/Users/Anastasia_Blinova/Documents/js-automation/js-atm-program/WebDriverIO/test/specs/Introduction.spec.js"/>
     </properties>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Services button on the page" time="3.431">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Click Services button on the page" time="4.752">
       <system-out><![CDATA[
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/element - {"using":"xpath","value":"//*[@href=\"/services\"]"}
-RESULT: {"using":"xpath","value":"//*[@href=\"/services\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/title - {}
+RESULT: {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/f387d2d7-d8c2-4370-8c77-ad851a14395d/rect - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/f387d2d7-d8c2-4370-8c77-ad851a14395d/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Industries button on the page" time="1.067">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Click Industries button on the page" time="1.134">
       <system-out><![CDATA[
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/url - {"url":"https://www.epam.com/"}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":-9541,"deltaY":46,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f387d2d7-d8c2-4370-8c77-ad851a14395d"}}]}]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return ((elem, options) => elem.scrollIntoView(options)).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f387d2d7-d8c2-4370-8c77-ad851a14395d","ELEMENT":"f387d2d7-d8c2-4370-8c77-ad851a14395d"},{"block":"start","inline":"nearest"}]}
 RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/title - {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/6ff02de0-a314-4f20-b3c7-b583bab08076/rect - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/6ff02de0-a314-4f20-b3c7-b583bab08076/click - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+RESULT: {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/f387d2d7-d8c2-4370-8c77-ad851a14395d/click - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/eb3050a8-7cea-41a8-b935-993c4f5ab142/rect - {}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Switcher radio button on the page" time="1.324">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Open BLOG page" time="2.467">
       <system-out><![CDATA[
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+RESULT: {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/eb3050a8-7cea-41a8-b935-993c4f5ab142/click - {}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/url - {"url":"https://www.epam.com/"}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":41,"deltaY":280,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"6ff02de0-a314-4f20-b3c7-b583bab08076"}}]}]}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action3","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":-9541,"deltaY":46,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"eb3050a8-7cea-41a8-b935-993c4f5ab142"}}]}]}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/element - {"using":"xpath","value":"//*[@class=\"switch\"]"}
-RESULT: {"using":"xpath","value":"//*[@class=\"switch\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"https://www.epam.com/insights/blogs/mastering-cloud-costs\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return ((elem, options) => elem.scrollIntoView(options)).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6ff02de0-a314-4f20-b3c7-b583bab08076","ELEMENT":"6ff02de0-a314-4f20-b3c7-b583bab08076"},{"block":"start","inline":"nearest"}]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return ((elem, options) => elem.scrollIntoView(options)).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"eb3050a8-7cea-41a8-b935-993c4f5ab142","ELEMENT":"eb3050a8-7cea-41a8-b935-993c4f5ab142"},{"block":"start","inline":"nearest"}]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/6ff02de0-a314-4f20-b3c7-b583bab08076/click - {}
+RESULT: {"using":"css selector","value":"button.top-navigation__item-link--a11y"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/eb3050a8-7cea-41a8-b935-993c4f5ab142/click - {}
+RESULT: {"using":"xpath","value":"//*[@href=\"https://www.epam.com/insights/blogs/mastering-cloud-costs\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/5e26967e-cca7-4e71-9af7-227c828725bd/rect - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/5e26967e-cca7-4e71-9af7-227c828725bd/click - {}
+RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82/rect - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+RESULT: {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/elements - {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
+RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82/click - {}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+RESULT: {"using":"css selector","value":"div.scaling-of-text-wrapper"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/442ac514-febb-4038-b4df-d5b395dcde9a/text - {}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action4","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":41,"deltaY":280,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82"}}]}]}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":96,"deltaY":166,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"5e26967e-cca7-4e71-9af7-227c828725bd"}}]}]}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return ((elem, options) => elem.scrollIntoView(options)).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82","ELEMENT":"01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82"},{"block":"start","inline":"nearest"}]}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Global button on the page" time="0.756">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Click Global button on the page" time="1.172">
       <system-out><![CDATA[
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/url - {"url":"https://www.epam.com/"}
+RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/01fb8a5c-3333-4a8f-8f7b-4d6ae7679f82/click - {}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19/element - {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return ((elem, options) => elem.scrollIntoView(options)).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5e26967e-cca7-4e71-9af7-227c828725bd","ELEMENT":"5e26967e-cca7-4e71-9af7-227c828725bd"},{"block":"start","inline":"nearest"}]}
 RESULT: {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
-COMMAND: DELETE /session/ea66cf1d-837f-4617-a98d-8efaa6e0ca19 - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"css selector","value":"nav.location-selector__panel"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/9b6e382d-5690-45e0-aa72-d084cf767d10/rect - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/9b6e382d-5690-45e0-aa72-d084cf767d10/click - {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element - {"using":"xpath","value":"//*[@href=\"https://www.epam.com/insights/blogs/mastering-cloud-costs\"]"}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
+RESULT: {"using":"css selector","value":"nav.location-selector__panel"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/elements - {"using":"css selector","value":"nav.location-selector__panel"}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+RESULT: {"using":"xpath","value":"//*[@href=\"https://www.epam.com/insights/blogs/mastering-cloud-costs\"]"}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/element/4946e952-11b7-4657-9cfc-364b832c6013/rect - {}
+RESULT: {"using":"css selector","value":"nav.location-selector__panel"}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/elements - {"using":"css selector","value":"nav.location-selector__panel"}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"9b6e382d-5690-45e0-aa72-d084cf767d10"}}]}]}
+RESULT: {}
+COMMAND: GET /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/window/rect - {}
+RESULT: {"using":"css selector","value":"nav.location-selector__panel"}
+RESULT: {}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/execute/sync - {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: DELETE /session/63c6c366-6aee-48ab-b71e-cb46d55f8426 - {}
+RESULT: {"script":"return (() => [\n        window.scrollX, window.scrollY\n    ]).apply(null, arguments)","args":[]}
+COMMAND: POST /session/63c6c366-6aee-48ab-b71e-cb46d55f8426/actions - {"actions":[{"id":"action7","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":96,"deltaY":166,"duration":200,"origin":{"element-6066-11e4-a52e-4f735466cecf":"5e26967e-cca7-4e71-9af7-227c828725bd"}}]}]}
 RESULT: {}
 ]]></system-out>
     </testcase>

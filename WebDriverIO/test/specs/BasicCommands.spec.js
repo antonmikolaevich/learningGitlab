@@ -18,8 +18,10 @@ describe("Basic Commands",()=>{
     
    });
 
-    it ("Check 'Accept Cookies' button is clickable'", async()=>{
-       await $('//button[text()="Accept All"]').click();
+    it ("Check 'Accept Cookies' button is clickable using costom command'", async()=>{
+       const element = await $('//button[text()="Accept All"]');
+       element.waitForClickable();
+       element.click();
        const acceptCookies = await $('//*[@id="onetrust-banner-sdk"]');
        console.log (await acceptCookies.isDisplayed());
     } );

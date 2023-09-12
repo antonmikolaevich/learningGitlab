@@ -137,6 +137,21 @@ exports.config = {
             return 'result-${options.cid}.xml';
         },
     }]],
+    reporters: [
+
+        ['allure', {
+  
+          outputDir: 'allure-results',
+  
+          disableWebdriverStepsReporting: true,
+  
+          disableWebdriverScreenshotsReporting: true,
+  
+          }
+  
+        ]
+  
+      ],
 
     
     //

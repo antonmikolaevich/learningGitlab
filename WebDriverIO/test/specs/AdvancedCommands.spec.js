@@ -28,8 +28,14 @@ describe("Advanced commands",()=>{
             }
             );
             });
-        });
-
-
-    
-   
+    it ("setCookies()", async()=>{
+      await browser.pause(6000);
+      await browser.setCookies([
+        {
+          name: "CrazyCookies",
+          value: "281909",
+        }],
+        await browser.pause(10000)
+        )
+    })  
+  })

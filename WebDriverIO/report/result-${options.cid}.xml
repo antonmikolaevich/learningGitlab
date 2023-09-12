@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Introduction" timestamp="2023-09-10T22:59:11" time="1.52" tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Introduction" timestamp="2023-09-12T10:42:56" time="6.931" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Introduction"/>
       <property name="capabilities" value="firefox.119_0a1.windows"/>
       <property name="file" value="file:///C:/Users/Anastasia_Blinova/Documents/js-automation/js-atm-program/WebDriverIO/test/specs/Introduction.spec.js"/>
     </properties>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Services button on the page" time="0.391">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Services button on the page" time="3.114">
       <system-out><![CDATA[
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@href=\"/services\"]"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/element - {"using":"xpath","value":"//*[@href=\"/services\"]"}
 RESULT: {"using":"xpath","value":"//*[@href=\"/services\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Industries button on the page" time="0.348">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Industries button on the page" time="1.387">
       <system-out><![CDATA[
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/element - {"using":"xpath","value":"//*[@href=\"/insights\"]"}
 RESULT: {"using":"xpath","value":"//*[@href=\"/insights\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Switcher radio button on the page" time="0.398">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Switcher radio button on the page" time="0.767">
       <system-out><![CDATA[
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@class=\"switch\"]"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/element - {"using":"xpath","value":"//*[@class=\"switch\"]"}
 RESULT: {"using":"xpath","value":"//*[@class=\"switch\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.119_0a1.windows.Introduction" name="Check Accept Cookies button is clickable" time="0.381">
+    <testcase classname="firefox.119_0a1.windows.Introduction" name="Find Global button on the page" time="1.662">
       <system-out><![CDATA[
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/url - {"url":"https://www.epam.com/"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/url - {"url":"https://www.epam.com/"}
 RESULT: {"url":"https://www.epam.com/"}
-COMMAND: POST /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b/element - {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
+COMMAND: POST /session/fbcfe317-3964-43cb-9d50-91d7a88f66de/element - {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
 RESULT: {"using":"xpath","value":"//*[@class=\"location-selector__button-language\"]"}
-COMMAND: DELETE /session/bbc8e49c-bb0e-40cd-a28c-041e8cb8e94b - {}
+COMMAND: DELETE /session/fbcfe317-3964-43cb-9d50-91d7a88f66de - {}
 RESULT: {}
 ]]></system-out>
     </testcase>

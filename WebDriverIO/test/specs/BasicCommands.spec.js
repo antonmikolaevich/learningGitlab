@@ -18,13 +18,22 @@ describe("Basic Commands",()=>{
     
    });
 
-    it ("Check 'Accept Cookies' button is clickable using costom command'", async()=>{
-       const element = await $('//button[text()="Accept All"]');
-       element.waitForClickable();
-       element.click();
-       const acceptCookies = await $('//*[@id="onetrust-banner-sdk"]');
-       console.log (await acceptCookies.isDisplayed());
-    } );
+
+    it("Check 'Accept Cookies' button", async () => {
+      await $('//button[text()="Accept All"]').waitForDisplayed({ timeout: 3000 });
+      await $('//button[text()="Accept All"]').click();
+      const acceptCookies = await $('//*[@id="onetrust-banner-sdk"]');
+      console.log(await acceptCookies.isDisplayed());
+    });
+    
+
+ //   it ("Check 'Accept Cookies' button '", async()=>{
+ //      const element = await $('//button[text()="Accept All"]');
+ //      await element.waitForClickable();
+ //      await element.click();
+ //      const acceptCookies = await $('//*[@id="onetrust-banner-sdk"]');
+ //      console.log (await acceptCookies.isDisplayed());
+ //   } );
 
  //   it ("Check 'Cookies Settings' button is clickable", async()=>{
  //     await $('//button[text()="Cookies Settings"]').click();

@@ -3,13 +3,13 @@ describe("Advanced commands",()=>{
         await browser.url('https://www.epam.com/')
       });
 
-      it ("browser actions", async()=>{
-        const buttonColour = await $('//button[text()="Accept All"]');
-        await buttonColour.moveTo();
-        await browser.pause(7000);
-    });
+  //    it ("browser actions", async()=>{
+  //      const buttonColour = await $('//button[text()="Accept All"]');
+  //     await buttonColour.moveTo();
+  //      await browser.pause(7000);
+   // });
 
-      it("execute() command", async()=>{
+      it ("execute() command", async()=>{
         const headerContent = await $('//*[@href="/services"]');
         await browser.execute(function(headerContent){
             headerContent.style.border = "white solid 10px";

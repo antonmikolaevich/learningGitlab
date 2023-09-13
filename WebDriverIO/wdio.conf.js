@@ -55,12 +55,16 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
-    capabilities: [{
-        browserName: 'firefox'
-    }],
+    capabilities: [
+      {
+        maxInstances: 1,
+        browserName: 'chrome',
+      },
+      {
+        maxInstances: 1,
+        browserName: 'firefox',
+      },
+    ],
 
     //
     // ===================
@@ -137,22 +141,6 @@ exports.config = {
             return 'result-${options.cid}.xml';
         },
     }]],
-    reporters: [
-
-        ['allure', {
-  
-          outputDir: 'allure-results',
-  
-          disableWebdriverStepsReporting: true,
-  
-          disableWebdriverScreenshotsReporting: true,
-  
-          }
-  
-        ]
-  
-      ],
-
     
     //
     // Options to be passed to Mocha.

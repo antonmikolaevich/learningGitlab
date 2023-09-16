@@ -1,6 +1,10 @@
+const BasePage = require('./PageObject/pages/base.page');
+
+const basePage = new BasePage();
+
 describe("Basic Commands",()=>{
     beforeEach(async () => {
-        await browser.url('https://www.epam.com/')
+      await basePage.open() 
       });
     
     it("Check Title", async ()=>{

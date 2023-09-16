@@ -1,6 +1,12 @@
+const BasePage = require('./PageObject/pages/base.page');
+const MainPage = require('./PageObject/pages/main.page');
+
+const basePage = new BasePage();
+const mainPage = new MainPage();
+
 describe("Introduction",()=>{
     beforeEach(async () => {
-        await browser.url('https://www.epam.com/')
+      await basePage.open() 
       });
 
       it ("Click 'Services' button on the page'", async()=>{
@@ -22,29 +28,36 @@ describe("Introduction",()=>{
         expect(pageTitle).toEqual("EPAM | Software Engineering & Product Development Services");
      } );
 
-
-     it ("Open 'BLOG' page'", async()=>{
-        const blogelement = await $('//*[@href="https://www.epam.com/insights/blogs/mastering-cloud-costs"]');
-        blogelement.scrollIntoView();
-        blogelement.click();
-        const wholepage = $('div.scaling-of-text-wrapper');
-        await expect( wholepage).toHaveText('Mastering Cloud Costs');
-     } );
-
      it ("Click 'Global' button on the page'", async()=>{
-        const globalButton = await $('//*[@class="location-selector__button-language"]');
-        globalButton.scrollIntoView();
-        globalButton.click();
+      const globalButton = await $('//*[@class="location-selector__button-language"]');
+      globalButton.scrollIntoView();
+      globalButton.click();
 
-        const panel = await $('nav.location-selector__panel');
-        await panel.waitForExist({
-         timeout: 5000,
-         revert: true,
-         timeoutMsg: "Sorry, the element is not displayd.",
-         interval: 50
-        });
-        expect(await panel.isExisting()).toEqual(true);
+      const panel = await $('nav.location-selector__panel');
+      await panel.waitForExist({
+       timeout: 5000,
+       revert: true,
+       timeoutMsg: "Sorry, the element is not displayd.",
+       interval: 50
+      });
+      expect(await panel.isExisting()).toEqual(true);
 
-     } );
+   } );
+   mainPage.mainComponent.blogIcon
+   it ("Open 'BLOG' page'", async()=>{
+             const blogelement = await mainPage.mainComponent.blogIcon();
+             blogelement.scrollIntoView();
+             blogelement.click();
+            const wholepage = $('div.scaling-of-text-wrapper');
+             await expect( wholepage).toHaveText('Mastering Cloud Costs');
+          } );
+
+ //    it ("Open 'BLOG' page'", async()=>{
+ //       const blogelement = await $('//*[@href="https://www.epam.com/insights/blogs/mastering-cloud-costs"]');
+ //       blogelement.scrollIntoView();
+ //       blogelement.click();
+ //       const wholepage = $('div.scaling-of-text-wrapper');
+ //       await expect( wholepage).toHaveText('Mastering Cloud Costs');
+ //    } );
 
     })

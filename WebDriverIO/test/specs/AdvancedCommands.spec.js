@@ -1,21 +1,35 @@
+const BasePage = require('./PageObject/pages/base.page');
+
+
+const basePage = new BasePage();
+
+
 describe("Advanced commands",()=>{
     beforeEach(async () => {
-        await browser.url('https://www.epam.com/')
+      await basePage.open() 
       });
 
-  //    it ("browser actions", async()=>{
-  //      const buttonColour = await $('//button[text()="Accept All"]');
-  //     await buttonColour.moveTo();
-  //      await browser.pause(7000);
-   // });
+      it ("browser actions", async()=>{
+        const buttonColour = await $('//button[text()="Accept All"]');
+       await buttonColour.moveTo();
+        await browser.pause(7000);
+    });
 
       it ("execute() command", async()=>{
-        const headerContent = await $('//*[@href="/services"]');
+       const headerContent = await $('//*[@href="/services"]');
         await browser.execute(function(headerContent){
             headerContent.style.border = "white solid 10px";
         }, headerContent);
-        await browser.pause(5000);
+       await browser.pause(5000);
       });
+
+  //    it ("execute() command", async()=>{
+  //      const headerContent = await mainPage.headerCom.servicesBtn();
+  //      await browser.execute(function(headerContent){
+  //          headerContent.style.border = "white solid 10px";
+  //      }, headerContent);
+  //      await browser.pause(5000);
+  //    });
 
     it ("waitUntil() command", async()=>{
         await $('span.search-icon').click();

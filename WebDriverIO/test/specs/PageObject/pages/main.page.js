@@ -1,4 +1,4 @@
-const MainComponent = require('./PageObject/components/main.component');
+const MainComponent = require('./components');
 
 class MainPage {
     constructor(){

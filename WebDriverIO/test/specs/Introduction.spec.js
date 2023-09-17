@@ -1,12 +1,11 @@
-const BasePage = require('./PageObject/pages/base.page');
 const MainPage = require('./PageObject/pages/main.page');
 
-const basePage = new BasePage();
+
 const mainPage = new MainPage();
 
 describe("Introduction",()=>{
     beforeEach(async () => {
-      await basePage.open() 
+      await browser.url('https://www.epam.com/')
       });
 
       it ("Click 'Services' button on the page'", async()=>{
@@ -43,7 +42,7 @@ describe("Introduction",()=>{
       expect(await panel.isExisting()).toEqual(true);
 
    } );
-   mainPage.mainComponent.blogIcon
+  
    it ("Open 'BLOG' page'", async()=>{
              const blogelement = await mainPage.mainComponent.blogIcon();
              blogelement.scrollIntoView();

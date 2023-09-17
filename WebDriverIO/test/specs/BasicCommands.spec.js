@@ -1,6 +1,4 @@
-const BasePage = require('./PageObject/pages/base.page');
-
-const basePage = new BasePage();
+const {pages} = require('./..specs/PageObject/index');
 
 describe("Basic Commands",()=>{
     beforeEach(async () => {

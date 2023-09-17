@@ -1,6 +1,11 @@
+const FirstPage = require('./../../PageObject/pages/first.page');
+
+
+const firstPage = new FirstPage();
+
 describe("Introduction",()=>{
     beforeEach(async () => {
-      await browser.url('https://www.epam.com/')
+      await firstPage.open() 
       });
 
       it ("Click 'Services' button on the page'", async()=>{

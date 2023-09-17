@@ -1,4 +1,4 @@
-const FirstPage = require('./PageObject/pages/first.page');
+const FirstPage = require('./../../PageObject/pages/first.page');
 
 
 const firstPage = new FirstPage();

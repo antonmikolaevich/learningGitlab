@@ -1,8 +1,3 @@
-const MainPage = require('./PageObject/pages/main.page');
-
-
-const mainPage = new MainPage();
-
 describe("Introduction",()=>{
     beforeEach(async () => {
       await browser.url('https://www.epam.com/')
@@ -43,20 +38,20 @@ describe("Introduction",()=>{
 
    } );
   
-   it ("Open 'BLOG' page'", async()=>{
-             const blogelement = await mainPage.mainComponent.blogIcon();
-             blogelement.scrollIntoView();
-             blogelement.click();
-            const wholepage = $('div.scaling-of-text-wrapper');
-             await expect( wholepage).toHaveText('Mastering Cloud Costs');
-          } );
+ //  it ("Open 'BLOG' page'", async()=>{
+ //            const blogelement = await mainPage.mainComponent.blogIcon();
+ //            blogelement.scrollIntoView();
+ //            blogelement.click();
+ //           const wholepage = $('div.scaling-of-text-wrapper');
+ //            await expect( wholepage).toHaveText('Mastering Cloud Costs');
+ //         } );
 
- //    it ("Open 'BLOG' page'", async()=>{
- //       const blogelement = await $('//*[@href="https://www.epam.com/insights/blogs/mastering-cloud-costs"]');
- //       blogelement.scrollIntoView();
- //       blogelement.click();
- //       const wholepage = $('div.scaling-of-text-wrapper');
- //       await expect( wholepage).toHaveText('Mastering Cloud Costs');
- //    } );
+    it ("Open 'BLOG' page'", async()=>{
+        const blogelement = await $('//*[@href="https://www.epam.com/insights/blogs/mastering-cloud-costs"]');
+        blogelement.scrollIntoView();
+        blogelement.click();
+        const wholepage = $('div.scaling-of-text-wrapper');
+        await expect( wholepage).toHaveText('Mastering Cloud Costs');
+     } );
 
     })

@@ -1,8 +1,11 @@
-const {pages} = require('./..specs/PageObject/index');
+const FirstPage = require('./../PageObject/pages/first.page');
+
+
+const firstPage = new FirstPage();
 
 describe("Basic Commands",()=>{
     beforeEach(async () => {
-      await basePage.open() 
+      await firstPage.open() 
       });
     
     it("Check Title", async ()=>{

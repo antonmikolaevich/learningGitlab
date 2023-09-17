@@ -1,8 +1,8 @@
-class BasePage {
+class FirstPage {
    
   async open() {
     await browser.url('https://www.epam.com/')
   }
 }
 
-module.exports = BasePage;
+module.exports = FirstPage;

@@ -1,12 +1,12 @@
-const BasePage = require('./PageObject/pages/base.page');
+const FirstPage = require('./PageObject/pages/first.page');
 
 
-const basePage = new BasePage();
+const firstPage = new FirstPage();
 
 
 describe("Advanced commands",()=>{
     beforeEach(async () => {
-      await basePage.open() 
+      await firstPage.open() 
       });
 
       it ("browser actions", async()=>{

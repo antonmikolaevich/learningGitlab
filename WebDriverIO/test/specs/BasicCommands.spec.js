@@ -1,7 +1,8 @@
-const FirstPage = require('./../../PageObject/pages/first.page');
-
+const FirstPage = require ('./../../PageObject/pages/first.page');
+const HeaderComonent = require ('./../../PageObject/components/header.component')
 
 const firstPage = new FirstPage();
+const header = new HeaderComonent();
 
 describe("Basic Commands",()=>{
     beforeEach(async () => {
@@ -25,7 +26,6 @@ describe("Basic Commands",()=>{
 
 
    browser.addCommand("customClick", async function () {
-      // `this` представляет элемент, на котором был вызван метод
       await this.waitForDisplayed();
       console.log("Before click");
       await this.click();
@@ -46,16 +46,27 @@ describe("Basic Commands",()=>{
  //    console.log (await cookiesSettings.isDisplayed());
  //   });
 
-    it ("Check search option", async()=>{
-      await $('span.search-icon').click();
-      const searchInput = await $('input#new_form_search.header-search__input');
-      await searchInput.setValue("JavaScript");
-      await $('button.custom-button.button-text').click();
-      const searchResult = await $('h2.search-results__counter[tabindex="0"]');
-      console.log (await searchResult.isDisplayed());
+ it ("Check search option", async()=>{
+  await header.searchIcon.click();
+  const searchInput = await $('input#new_form_search.header-search__input');
+  await searchInput.setValue("JavaScript");
+  await $('button.custom-button.button-text').click();
+  const searchResult = await $('h2.search-results__counter[tabindex="0"]');
+  console.log (await searchResult.isDisplayed());
 
-      await browser.pause(5000);
-    });
+  await browser.pause(5000);
+});
+
+//    it ("Check search option", async()=>{
+//      await $('span.search-icon').click();
+//      const searchInput = await $('input#new_form_search.header-search__input');
+//      await searchInput.setValue("JavaScript");
+//      await $('button.custom-button.button-text').click();
+//      const searchResult = await $('h2.search-results__counter[tabindex="0"]');
+//      console.log (await searchResult.isDisplayed());
+//
+//      await browser.pause(5000);
+//    });
 
    it ('Check the openning Search result', async()=>{
       await $('span.search-icon').click();

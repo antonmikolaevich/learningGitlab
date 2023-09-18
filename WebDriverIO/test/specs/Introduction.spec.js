@@ -1,7 +1,9 @@
-const FirstPage = require('./../../PageObject/pages/first.page');
-
+const FirstPage = require ('./../../PageObject/pages/first.page');
+const HeaderComonent = require ('./../../PageObject/components/header.component')
 
 const firstPage = new FirstPage();
+const header = new HeaderComonent();
+
 
 describe("Introduction",()=>{
     beforeEach(async () => {
@@ -9,7 +11,7 @@ describe("Introduction",()=>{
       });
 
       it ("Click 'Services' button on the page'", async()=>{
-         const buttonServices = $('button.top-navigation__item-link--a11y');
+         const buttonServices = await header.item('services');
          buttonServices.scrollIntoView();
          buttonServices.click();
          const pageTitle = await browser.getTitle();
@@ -18,8 +20,8 @@ describe("Introduction",()=>{
       } );
 
 
-     it ("Click 'Industries' button on the page'", async()=>{
-        const buttonIndustries = await $('//*[@href="/insights"]');
+     it ("Click 'Insights' button on the page'", async()=>{
+        const buttonIndustries = await header.item('insights');
         buttonIndustries.scrollIntoView();
         buttonIndustries.click();
         const pageTitle = await browser.getTitle();
@@ -28,7 +30,7 @@ describe("Introduction",()=>{
      } );
 
      it ("Click 'Global' button on the page'", async()=>{
-      const globalButton = await $('//*[@class="location-selector__button-language"]');
+      const globalButton = await header.globalBtn;
       globalButton.scrollIntoView();
       globalButton.click();
 

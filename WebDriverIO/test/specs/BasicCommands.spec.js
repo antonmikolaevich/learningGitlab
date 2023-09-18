@@ -1,8 +1,12 @@
 const FirstPage = require ('./../../PageObject/pages/first.page');
-const HeaderComonent = require ('./../../PageObject/components/header.component')
+const HeaderComonent = require ('./../../PageObject/components/header.component');
+const SearchPanel = require ('./../../PageObject/components/searchpanel.component');
+
 
 const firstPage = new FirstPage();
 const header = new HeaderComonent();
+const searchPanel = new SearchPanel();
+
 
 describe("Basic Commands",()=>{
     beforeEach(async () => {
@@ -16,7 +20,7 @@ describe("Basic Commands",()=>{
     });
     
     it ("Check 'Accept Cookies' button change the colour after over'", async()=>{
-      const cookies = await $('//button[text()="Accept All"]');
+      const cookies = await $("//button[text()='Accept All']");
       const color = await cookies.getCSSProperty('color');
       console.log(color);
 
@@ -50,11 +54,22 @@ describe("Basic Commands",()=>{
   await header.searchIcon.click();
   const searchInput = await $('input#new_form_search.header-search__input');
   await searchInput.setValue("JavaScript");
-  await $('button.custom-button.button-text').click();
+  await firstPage.searchPanel.findBtn.click();
   const searchResult = await $('h2.search-results__counter[tabindex="0"]');
   console.log (await searchResult.isDisplayed());
 
   await browser.pause(5000);
+});
+it ('Check the openning Search result', async()=>{
+  await header.searchIcon.click();
+  const searchInput = await $('input#new_form_search.header-search__input');
+  await searchInput.setValue("JavaScript");
+  await firstPage.searchPanel.findBtn.click();
+  await $('a.search-results__title-link').click();
+
+  const pageTitle = await browser.getTitle();
+  console.log(pageTitle);
+   
 });
 
 //    it ("Check search option", async()=>{
@@ -68,16 +83,16 @@ describe("Basic Commands",()=>{
 //      await browser.pause(5000);
 //    });
 
-   it ('Check the openning Search result', async()=>{
-      await $('span.search-icon').click();
-      const searchInput = await $('input#new_form_search.header-search__input');
-      await searchInput.setValue("JavaScript");
-      await $('button.custom-button.button-text').click();
-      await $('a.search-results__title-link').click();
-
-      const pageTitle = await browser.getTitle();
-      console.log(pageTitle);
+//   it ('Check the openning Search result', async()=>{
+//      await $('span.search-icon').click();
+//      const searchInput = await $('input#new_form_search.header-search__input');
+//      await searchInput.setValue("JavaScript");
+//      await $('button.custom-button.button-text').click();
+//      await $('a.search-results__title-link').click();
+//
+//      const pageTitle = await browser.getTitle();
+//      console.log(pageTitle);
        
-   });
+//   });
   
 })

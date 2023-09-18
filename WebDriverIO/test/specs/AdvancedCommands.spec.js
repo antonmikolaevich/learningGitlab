@@ -1,7 +1,8 @@
-const FirstPage = require('./../../PageObject/pages/first.page');
-
+const FirstPage = require ('./../../PageObject/pages/first.page');
+const HeaderComonent = require ('./../../PageObject/components/header.component')
 
 const firstPage = new FirstPage();
+const header = new HeaderComonent();
 
 
 describe("Advanced commands",()=>{
@@ -16,23 +17,15 @@ describe("Advanced commands",()=>{
     });
 
       it ("execute() command", async()=>{
-       const headerContent = await $('//*[@href="/services"]');
+       const headerContent = await header.item('services');
         await browser.execute(function(headerContent){
             headerContent.style.border = "white solid 10px";
         }, headerContent);
        await browser.pause(5000);
       });
 
-  //    it ("execute() command", async()=>{
-  //      const headerContent = await mainPage.headerCom.servicesBtn();
-  //      await browser.execute(function(headerContent){
-  //          headerContent.style.border = "white solid 10px";
-  //      }, headerContent);
-  //      await browser.pause(5000);
-  //    });
-
-    it ("waitUntil() command", async()=>{
-        await $('span.search-icon').click();
+      it ("waitUntil() command", async()=>{
+        await header.searchIcon.click();
         await browser.waitUntil(
             async() => (await $('//*[@class="header-search__panel opened"]').isDisplayed()),
             {
@@ -42,6 +35,35 @@ describe("Advanced commands",()=>{
             }
             );
             });
+
+  //          it ("execute() command", async()=>{
+  //            const headerContent = await $('//*[@href="/services"]');
+  //             await browser.execute(function(headerContent){
+  //                 headerContent.style.border = "white solid 10px";
+  //             }, headerContent);
+  //            await browser.pause(5000);
+  //           });
+
+  //    it ("execute() command", async()=>{
+  //      const headerContent = await mainPage.headerCom.servicesBtn();
+  //      await browser.execute(function(headerContent){
+  //          headerContent.style.border = "white solid 10px";
+  //      }, headerContent);
+  //      await browser.pause(5000);
+  //    });
+
+  //  it ("waitUntil() command", async()=>{
+  //      await $('span.search-icon').click();
+  //      await browser.waitUntil(
+  //          async() => (await $('//*[@class="header-search__panel opened"]').isDisplayed()),
+  //          {
+  //              timeout: 5000,
+   //             interval: 600,
+   //             timeoutMsg: "Search panel doesn't open"
+   //         }
+  //          );
+  //          });
+
     it ("setCookies()", async()=>{
       await browser.pause(6000);
       await browser.setCookies([

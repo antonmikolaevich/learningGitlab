@@ -1,7 +1,9 @@
-class HeaderComonent {
-    get rootE1() {
-        return $('//*[@class="header__inner"]');
+const BaseComponent = require ('./base.component');
 
+class HeaderComonent extends BaseComponent {
+
+    constructor() {
+        super('//*[@class="header__inner"]');
     }
 
     get searchIcon () {

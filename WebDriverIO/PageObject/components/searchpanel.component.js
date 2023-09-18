@@ -1,9 +1,11 @@
-class SearchPanel {
-    get rootE1() {
-        return $('//*[@class="header__inner"]');
+const BaseComponent = require ('./base.component');
 
+class SearchPanel extends BaseComponent {
+
+    constructor() {
+        super('//*[@class="header__inner"]');
     }
-
+    
     get findBtn () {
         return this.rootE1.$('button.custom-button.button-text');
 

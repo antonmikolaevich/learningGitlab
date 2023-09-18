@@ -1,14 +1,13 @@
+const BasePage = require ('./base.page');
 const SearchPanel = require('./../components/searchpanel.component');
 
-class FirstPage {
+class FirstPage extends BasePage {
 
   constructor(){
+    super ('https://www.epam.com/')
     this.searchPanel = new SearchPanel();
   }
    
-  async open() {
-    await browser.url('https://www.epam.com/')
-  }
 }
 
 module.exports = FirstPage;

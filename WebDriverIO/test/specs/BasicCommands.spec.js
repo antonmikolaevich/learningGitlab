@@ -1,11 +1,6 @@
 const FirstPage = require ('./../../PageObject/pages/first.page');
-const HeaderComonent = require ('./../../PageObject/components/header.component');
-const SearchPanel = require ('./../../PageObject/components/searchpanel.component');
-
 
 const firstPage = new FirstPage();
-const header = new HeaderComonent();
-const searchPanel = new SearchPanel();
 
 
 describe("Basic Commands",()=>{
@@ -51,7 +46,7 @@ describe("Basic Commands",()=>{
  //   });
 
  it ("Check search option", async()=>{
-  await header.searchIcon.click();
+  await firstPage.headerComponent.searchIcon.click();
   const searchInput = await $('input#new_form_search.header-search__input');
   await searchInput.setValue("JavaScript");
   await firstPage.searchPanel.findBtn.click();
@@ -61,7 +56,7 @@ describe("Basic Commands",()=>{
   await browser.pause(5000);
 });
 it ('Check the openning Search result', async()=>{
-  await header.searchIcon.click();
+  await firstPage.headerComponent.searchIcon.click();
   const searchInput = await $('input#new_form_search.header-search__input');
   await searchInput.setValue("JavaScript");
   await firstPage.searchPanel.findBtn.click();

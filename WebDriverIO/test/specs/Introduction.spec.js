@@ -1,8 +1,8 @@
 const FirstPage = require ('./../../PageObject/pages/first.page');
-const HeaderComonent = require ('./../../PageObject/components/header.component')
+
 
 const firstPage = new FirstPage();
-const header = new HeaderComonent();
+
 
 
 describe("Introduction",()=>{
@@ -11,7 +11,7 @@ describe("Introduction",()=>{
       });
 
       it ("Click 'Services' button on the page'", async()=>{
-         const buttonServices = await header.item('services');
+         const buttonServices = await firstPage.headerComponent.item('services');
          buttonServices.scrollIntoView();
          buttonServices.click();
          const pageTitle = await browser.getTitle();
@@ -21,7 +21,7 @@ describe("Introduction",()=>{
 
 
      it ("Click 'Insights' button on the page'", async()=>{
-        const buttonIndustries = await header.item('insights');
+        const buttonIndustries = await firstPage.headerComponent.item('insights');
         buttonIndustries.scrollIntoView();
         buttonIndustries.click();
         const pageTitle = await browser.getTitle();
@@ -30,7 +30,7 @@ describe("Introduction",()=>{
      } );
 
      it ("Click 'Global' button on the page'", async()=>{
-      const globalButton = await header.globalBtn;
+      const globalButton = await firstPage.headerComponent.globalBtn;
       globalButton.scrollIntoView();
       globalButton.click();
 

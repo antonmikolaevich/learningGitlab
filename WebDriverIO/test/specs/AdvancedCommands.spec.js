@@ -1,13 +1,8 @@
-const FirstPage = require ('./../../PageObject/pages/first.page');
-const HeaderComonent = require ('./../../PageObject/components/header.component')
-
-const firstPage = new FirstPage();
-const header = new HeaderComonent();
-
+const{pages} = require ('./../../PageObject');
 
 describe("Advanced commands",()=>{
     beforeEach(async () => {
-      await firstPage.open() 
+      await pages('first').open() 
       });
 
       it ("browser actions", async()=>{
@@ -17,7 +12,7 @@ describe("Advanced commands",()=>{
     });
 
       it ("execute() command", async()=>{
-       const headerContent = await header.item('services');
+       const headerContent = await pages('first').headerComponent.item('services');
         await browser.execute(function(headerContent){
             headerContent.style.border = "white solid 10px";
         }, headerContent);
@@ -25,7 +20,7 @@ describe("Advanced commands",()=>{
       });
 
       it ("waitUntil() command", async()=>{
-        await header.searchIcon.click();
+        await pages('first').headerComponent.searchIcon.click();
         await browser.waitUntil(
             async() => (await $('//*[@class="header-search__panel opened"]').isDisplayed()),
             {

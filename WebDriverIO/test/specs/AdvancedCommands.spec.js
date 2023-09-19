@@ -1,4 +1,4 @@
-const{pages} = require ('./../../PageObject');
+const{pages} = require ('./../../pageobject');
 
 describe("Advanced commands",()=>{
     beforeEach(async () => {

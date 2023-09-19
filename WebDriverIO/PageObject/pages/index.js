@@ -5,7 +5,7 @@ const FirstPage = require ('./first.page');
  * @returns {FirstPage} 
  */
 
-function page(name) {
+function pages(name) {
     const items = {
       first: new FirstPage(),
       
@@ -15,6 +15,6 @@ function page(name) {
   
   module.exports = {
     FirstPage,
-    page
+    pages
   }
   

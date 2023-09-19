@@ -1,11 +1,8 @@
-const FirstPage = require ('./../../PageObject/pages/first.page');
-
-const firstPage = new FirstPage();
-
+const{pages} = require ('./../../pageobject');
 
 describe("Basic Commands",()=>{
     beforeEach(async () => {
-      await firstPage.open() 
+      await pages('first').open() 
       });
     
     it("Check Title", async ()=>{
@@ -46,20 +43,20 @@ describe("Basic Commands",()=>{
  //   });
 
  it ("Check search option", async()=>{
-  await firstPage.headerComponent.searchIcon.click();
+  await pages('first').headerComponent.searchIcon.click();
   const searchInput = await $('input#new_form_search.header-search__input');
   await searchInput.setValue("JavaScript");
-  await firstPage.searchPanel.findBtn.click();
+  await pages('first').searchPanel.findBtn.click();
   const searchResult = await $('h2.search-results__counter[tabindex="0"]');
   console.log (await searchResult.isDisplayed());
 
   await browser.pause(5000);
 });
 it ('Check the openning Search result', async()=>{
-  await firstPage.headerComponent.searchIcon.click();
+  await pages('first').headerComponent.searchIcon.click();
   const searchInput = await $('input#new_form_search.header-search__input');
   await searchInput.setValue("JavaScript");
-  await firstPage.searchPanel.findBtn.click();
+  await pages('first').searchPanel.findBtn.click();
   await $('a.search-results__title-link').click();
 
   const pageTitle = await browser.getTitle();

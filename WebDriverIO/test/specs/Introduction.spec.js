@@ -1,17 +1,12 @@
-const FirstPage = require ('./../../PageObject/pages/first.page');
-
-
-const firstPage = new FirstPage();
-
-
+const{pages} = require ('./../../pageobject');
 
 describe("Introduction",()=>{
     beforeEach(async () => {
-      await firstPage.open() 
+      await pages('first').open() 
       });
 
       it ("Click 'Services' button on the page'", async()=>{
-         const buttonServices = await firstPage.headerComponent.item('services');
+         const buttonServices = await pages('first').headerComponent.item('services');
          buttonServices.scrollIntoView();
          buttonServices.click();
          const pageTitle = await browser.getTitle();
@@ -21,7 +16,7 @@ describe("Introduction",()=>{
 
 
      it ("Click 'Insights' button on the page'", async()=>{
-        const buttonIndustries = await firstPage.headerComponent.item('insights');
+        const buttonIndustries = await pages('first').headerComponent.item('insights');
         buttonIndustries.scrollIntoView();
         buttonIndustries.click();
         const pageTitle = await browser.getTitle();
@@ -30,7 +25,7 @@ describe("Introduction",()=>{
      } );
 
      it ("Click 'Global' button on the page'", async()=>{
-      const globalButton = await firstPage.headerComponent.globalBtn;
+      const globalButton = await pages('first').headerComponent.globalBtn;
       globalButton.scrollIntoView();
       globalButton.click();
 

@@ -10,6 +10,12 @@ class HeaderComonent extends BaseComponent {
         return this.rootE1.$('span.search-icon');
 
     }
+
+    async click(icon) {
+        if (icon.toLowerCase() === 'save') {
+          await this.searchIcon.click()
+        }
+    }
     
     item(param) {
         const selector = {

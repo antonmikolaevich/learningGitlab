@@ -9,10 +9,11 @@ Feature: Header
   @2
   Scenario Outline: Check search option
     Given I open 'first' page
-    When I click 'searchIcon' icon
+    When I click 'search' icon
     And I type <Value> in 'inputSearch'
-    And I click 'findBtn'
+    And I click 'findBtn' button
 
     Examples:
+    | Value      |
     | JavaScript |
     | DevOps     |

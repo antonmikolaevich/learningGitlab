@@ -44,7 +44,7 @@ describe("Basic Commands",()=>{
 
  it ("Check search option", async()=>{
   await pages('first').headerComponent.searchIcon.click();
-  const searchInput = await $('input#new_form_search.header-search__input');
+  const searchInput = await pages('first').searchPanel.inputSearch;
   await searchInput.setValue("JavaScript");
   await pages('first').searchPanel.findBtn.click();
   const searchResult = await $('h2.search-results__counter[tabindex="0"]');

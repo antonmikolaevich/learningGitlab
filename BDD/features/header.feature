@@ -1,7 +1,6 @@
 Feature: Header
 
-Scenario: Check search button
- Given I open "BasePage" page
-
-
+  Scenario: Page should have 'EPAM | Software Engineering & Product Development Services' title
+    Given I open 'first' page
+    Then Page title should "be equal to" 'EPAM | Software Engineering & Product Development Services'
 

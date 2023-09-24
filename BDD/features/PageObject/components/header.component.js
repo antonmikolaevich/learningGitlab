@@ -6,7 +6,7 @@ class HeaderComonent extends BaseComponent {
         super('//*[@class="header__inner"]');
     }
 
-    get searchIcon () {
+    searchIcon () {
         return this.rootE1.$('span.search-icon');
 
     }

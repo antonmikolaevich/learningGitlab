@@ -6,12 +6,12 @@ class SearchPanel extends BaseComponent {
         super('//*[@class="header__inner"]');
     }
     
-    get findBtn () {
+    findBtn () {
         return this.rootE1.$('button.custom-button.button-text');
 
     }
 
-    get inputSearch() {
+   inputSearch() {
         return this.rootE1.$('input#new_form_search.header-search__input');
     }
 }

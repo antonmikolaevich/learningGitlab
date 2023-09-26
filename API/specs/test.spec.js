@@ -10,5 +10,18 @@ describe("API Test Suite", () => {
   expect(response.status).to.equal(200)
   expect(response.data.title).to.equal('EPAM | Software Engineering & Product Development Services  ')
 
+    });
+
+    it ("POST", async()=>{
+        const response = await axios({
+            method: "post",
+            url: "https://jsonplaceholder.typicode.com/posts",
+            headers: {'Content-type': 'application/json; chartset=UTF-8'},
+            data: {
+                title: 'Java',
+                description: 'Script',
+                userID: 'is fun'
+            },
+        })
     })
 })

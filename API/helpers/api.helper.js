@@ -1,10 +1,11 @@
 const axios = require("axios");
+const { TEST_URL } = require('../config/endpoint')
 
 const sendRequest = async (url, data = null, method = 'get') => {
     try{
         const response = await axios({
             method,
-            url: 'https://jsonplaceholder.typicode.com/${url}',
+            url: `${TEST_URL}/${url}`,
             headers:{},
             data
         })
